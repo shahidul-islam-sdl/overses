@@ -10,7 +10,7 @@ exports.handler = async (event) => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: `grant_type=client_credentials&client_id=${process.env.O6Jm4lNjJp2NA1BbLvvOwp68FU4phoCf}&client_secret=${process.env.AfekgL0mWNTTvnZW}`
+            body: `grant_type=client_credentials&client_id=${process.env.AMADEUS_API_KEY}&client_secret=${process.env.AMADEUS_API_SECRET}`
         });
         const tokenData = await tokenResponse.json();
         const token = tokenData.access_token;
